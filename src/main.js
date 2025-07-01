@@ -37,7 +37,6 @@ const router = createRouter({
   routes,
 });
 // Vuetify Theme (optional, aber empfohlen)
-
 const vuetify = createVuetify({
   icons: {
     defaultSet: 'mdi',
@@ -50,8 +49,8 @@ const vuetify = createVuetify({
       floris: {
         dark: false,
         colors: {
-          primary: '#223A5E', // elegantes dunkles Blau
-          secondary: '#1DE9B6', // Türkis Akzent
+          primary: '#223a5e', // elegantes dunkles Blau
+          secondary: '#bfbe37', // Curry Akzent
           background: '#f5f7fa',
           surface: '#fff',
           error: '#e53935',

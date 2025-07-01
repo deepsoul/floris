@@ -1,14 +1,21 @@
 <template>
-  <v-container class="py-8">
-    <h1 class="text-h4 font-weight-bold mb-6">Erkrankungen</h1>
-    <v-expansion-panels multiple>
-      <v-expansion-panel v-for="(item, i) in erkrankungen" :key="i">
-        <v-expansion-panel-title>{{ item.title }}</v-expansion-panel-title>
-        <v-expansion-panel-text>
-          <div v-html="item.text" />
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
+  <v-container class="my-12">
+    <h1 class="text-h4 font-weight-bold mb-8 text-center">Erkrankungen</h1>
+    <v-card class="pa-6" elevation="2">
+      <v-expansion-panels multiple>
+        <v-expansion-panel v-for="(item, i) in erkrankungen" :key="i">
+          <v-expansion-panel-title>
+            <v-icon start color="primary" class="mr-2"
+              >mdi-alert-circle-outline</v-icon
+            >
+            {{ item.title }}
+          </v-expansion-panel-title>
+          <v-expansion-panel-text>
+            <div v-html="item.text" />
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </v-card>
   </v-container>
 </template>
 <script setup>

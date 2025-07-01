@@ -1,9 +1,16 @@
 <template>
-  <v-container class="py-8">
-    <h1 class="text-h4 font-weight-bold mb-6">Operationen</h1>
-    <v-list density="compact">
-      <v-list-item v-for="item in operationen" :key="item" :title="item" />
-    </v-list>
+  <v-container class="my-12">
+    <h1 class="text-h4 font-weight-bold mb-8 text-center">Operationen</h1>
+    <v-card class="pa-6 mx-auto" elevation="2" max-width="600">
+      <v-list density="compact">
+        <v-list-item
+          v-for="item in operationen"
+          :key="item"
+          :title="item"
+          prepend-icon="mdi-scalpel"
+        />
+      </v-list>
+    </v-card>
   </v-container>
 </template>
 <script setup>

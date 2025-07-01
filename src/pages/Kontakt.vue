@@ -2,6 +2,10 @@
   <v-container class="py-8" style="max-width: 600px">
     <h1 class="text-h4 font-weight-bold mb-6">Kontakt</h1>
     <v-form v-model="valid" @submit.prevent="submit">
+      <v-radio-group v-model="method" row class="mb-4">
+        <v-radio label="Per Server (PHP)" value="php" />
+        <v-radio label="Per EmailJS (direkt, ohne Backend)" value="emailjs" />
+      </v-radio-group>
       <v-text-field
         v-model="name"
         label="Name"
@@ -32,32 +36,113 @@
       >
         <template #label>
           <span class="mr-2">Ich akzeptiere die</span>
-          <router-link to="/datenschutz">Datenschutzerklärung</router-link>.
+          <router-link to="/datenschutz" target="_blank"
+            >Datenschutzerklärung</router-link
+          >
         </template>
       </v-checkbox>
-      <v-btn :disabled="!valid" color="primary" type="submit">Absenden</v-btn>
-      <v-alert v-if="success" type="success" class="mt-4"
-        >Vielen Dank für Ihre Nachricht!</v-alert
+      <v-btn :disabled="!valid || loading" color="primary" type="submit"
+        >Absenden</v-btn
       >
+      <v-alert v-if="success" type="success" class="mt-4">{{
+        feedback
+      }}</v-alert>
+      <v-alert v-if="error" type="error" class="mt-4">{{ feedback }}</v-alert>
     </v-form>
   </v-container>
 </template>
 <script setup>
 import {ref} from 'vue';
+import emailjs from 'emailjs-com';
 const name = ref('');
 const email = ref('');
 const message = ref('');
 const privacy = ref(false);
 const valid = ref(false);
 const success = ref(false);
-function submit() {
-  if (valid.value) {
-    success.value = true;
-    setTimeout(() => (success.value = false), 4000);
-    name.value = '';
-    email.value = '';
-    message.value = '';
-    privacy.value = false;
+const error = ref(false);
+const feedback = ref('');
+const loading = ref(false);
+const method = ref('php'); // Versandmethode: 'php' oder 'emailjs'
+
+// EmailJS-Konfiguration (hier deine Daten eintragen!)
+const EMAILJS_SERVICE_ID = 'dein_service_id';
+const EMAILJS_TEMPLATE_ID = 'dein_template_id';
+const EMAILJS_PUBLIC_KEY = 'dein_public_key';
+
+async function submit() {
+  if (!valid.value) return;
+  loading.value = true;
+  success.value = false;
+  error.value = false;
+  feedback.value = '';
+  if (method.value === 'php') {
+    // PHP-Mailer
+    try {
+      const res = await fetch('/sendmail.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+          name: name.value,
+          email: email.value,
+          message: message.value,
+          privacy: privacy.value ? 'true' : '',
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        success.value = true;
+        feedback.value = data.message;
+        name.value = '';
+        email.value = '';
+        message.value = '';
+        privacy.value = false;
+      } else {
+        error.value = true;
+        feedback.value = data.message || 'Fehler beim Senden.';
+      }
+    } catch (e) {
+      error.value = true;
+      feedback.value = 'Fehler beim Senden.';
+    } finally {
+      loading.value = false;
+      setTimeout(() => {
+        success.value = false;
+        error.value = false;
+        feedback.value = '';
+      }, 6000);
+    }
+  } else if (method.value === 'emailjs') {
+    // EmailJS
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name.value,
+          from_email: email.value,
+          message: message.value,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
+      success.value = true;
+      feedback.value =
+        'Vielen Dank für Ihre Nachricht! Wir melden uns zeitnah.';
+      name.value = '';
+      email.value = '';
+      message.value = '';
+      privacy.value = false;
+    } catch (e) {
+      error.value = true;
+      feedback.value = 'Fehler beim Senden über EmailJS.';
+    } finally {
+      loading.value = false;
+      setTimeout(() => {
+        success.value = false;
+        error.value = false;
+        feedback.value = '';
+      }, 6000);
+    }
   }
 }
 </script>

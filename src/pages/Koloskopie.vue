@@ -1,7 +1,12 @@
 <template>
-  <v-container class="py-8">
-    <h1 class="text-h4 font-weight-bold mb-6">Koloskopie</h1>
-    <v-card class="pa-4 mb-4" elevation="1">
+  <v-container class="my-12">
+    <h1 class="text-h4 font-weight-bold mb-8 text-center">Koloskopie</h1>
+    <v-card class="pa-6 mx-auto" elevation="2" max-width="700">
+      <v-card-title class="font-weight-bold mb-2">
+        <v-icon start color="primary">mdi-magnify</v-icon>
+        Darmspiegelung (Koloskopie)
+      </v-card-title>
+      <v-divider class="mb-2" />
       <v-card-text>
         <p>
           Die Koloskopie (Darmspiegelung) ist eine der wichtigsten
