@@ -78,9 +78,9 @@
             <v-icon size="48" color="primary" class="mb-2"
               >mdi-hand-heart</v-icon
             >
-            <h2 class="text-h5 font-weight-bold mb-4">
+            <h3 class="font-weight-bold mb-4">
               Liebe Patientin, Lieber Patient!
-            </h2>
+            </h3>
             <p>
               Wir möchten Ihnen hier unsere Praxis sowie unser Team vorstellen.
             </p>
@@ -159,9 +159,7 @@
     </v-container>
     <!-- Leistungen -->
     <v-container class="my-12" id="leistungen">
-      <h2 class="text-h4 font-weight-bold mb-6 text-center">
-        Unsere Leistungen
-      </h2>
+      <h2 class="font-weight-bold mb-6 text-center">Unsere Leistungen</h2>
       <v-row>
         <v-col cols="12" md="4">
           <v-hover v-slot="{isHovering, props}">
@@ -220,7 +218,7 @@
     </v-container>
     <!-- Ärzte-Team -->
     <v-container class="my-12" id="team">
-      <h2 class="text-h4 font-weight-bold mb-6 text-center">Unsere Ärzte</h2>
+      <h2 class="font-weight-bold mb-6 text-center">Unsere Ärzte</h2>
       <v-row>
         <v-col cols="12" md="4">
           <v-hover v-slot="{isHovering, props}">
@@ -229,9 +227,9 @@
               :elevation="isHovering ? 8 : 2"
               v-bind="props"
             >
-              <v-avatar size="150" class="mx-auto mb-2 elevation-2">
+              <v-avatar size="200" class="mx-auto mb-2 elevation-2">
                 <v-img
-                  size="150"
+                  size="200"
                   src="/assets/enddarmzentrum/Oliver-Schunter.jpeg"
                 ></v-img>
               </v-avatar>
@@ -248,9 +246,9 @@
               :elevation="isHovering ? 8 : 2"
               v-bind="props"
             >
-              <v-avatar size="150" class="mx-auto mb-2 elevation-2">
+              <v-avatar size="200" class="mx-auto mb-2 elevation-2">
                 <v-img
-                  size="150"
+                  size="200"
                   src="/assets/enddarmzentrum/Markus-Piro.jpeg"
                 ></v-img>
               </v-avatar>
@@ -267,9 +265,9 @@
               :elevation="isHovering ? 8 : 2"
               v-bind="props"
             >
-              <v-avatar size="150" class="mx-auto mb-2 elevation-2">
+              <v-avatar size="200" class="mx-auto mb-2 elevation-2">
                 <v-img
-                  size="150"
+                  size="200"
                   src="/assets/enddarmzentrum/Floris-Engelsman.jpeg"
                 ></v-img>
               </v-avatar>
@@ -283,7 +281,7 @@
     </v-container>
     <!-- Team -->
     <v-container class="my-12">
-      <h2 class="text-h4 font-weight-bold mb-6 text-center">Unser Team</h2>
+      <h2 class="font-weight-bold mb-6 text-center">Unser Team</h2>
       <v-row>
         <v-col cols="12" sm="6" md="3" v-for="(member, i) in team" :key="i">
           <v-hover v-slot="{isHovering, props}">
@@ -293,7 +291,7 @@
               v-bind="props"
             >
               <v-avatar
-                size="80"
+                size="150"
                 class="mx-auto mb-2 elevation-1"
                 :class="{'elevation-4': isHovering}"
               >
@@ -301,7 +299,7 @@
                   <v-img :src="member.img" />
                 </template>
                 <template v-else>
-                  <v-icon size="80">mdi-account-circle</v-icon>
+                  <v-icon size="150">mdi-account-circle</v-icon>
                 </template>
               </v-avatar>
               <v-card-title class="font-weight-bold">{{

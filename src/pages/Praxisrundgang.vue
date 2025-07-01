@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-12">
-    <h1 class="text-h4 font-weight-bold mb-8 text-center">Praxisrundgang</h1>
+    <h2 class="font-weight-bold mb-8 text-center">Praxisrundgang</h2>
     <v-row>
       <v-col cols="12" md="8">
         <v-card class="elevation-2 mb-6">

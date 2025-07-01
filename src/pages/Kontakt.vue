@@ -1,6 +1,6 @@
 <template>
   <v-container class="py-8" style="max-width: 600px">
-    <h1 class="text-h4 font-weight-bold mb-6">Kontakt</h1>
+    <h2 class="font-weight-bold mb-6">Kontakt</h2>
     <v-form v-model="valid" @submit.prevent="submit">
       <v-radio-group v-model="method" row class="mb-4">
         <v-radio label="Per Server (PHP)" value="php" />

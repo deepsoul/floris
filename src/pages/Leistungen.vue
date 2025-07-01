@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-12">
-    <h1 class="text-h4 font-weight-bold mb-8 text-center">Leistungen</h1>
+    <h2 class="font-weight-bold mb-8 text-center">Leistungen</h2>
     <v-row>
       <v-col cols="12" md="6">
         <v-card class="pa-6 mb-6" elevation="2">

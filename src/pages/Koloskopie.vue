@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-12">
-    <h1 class="text-h4 font-weight-bold mb-8 text-center">Koloskopie</h1>
+    <h2 class="font-weight-bold mb-8 text-center">Koloskopie</h2>
     <v-card class="pa-6 mx-auto" elevation="2" max-width="700">
       <v-card-title class="font-weight-bold mb-2">
         <v-icon start color="primary">mdi-magnify</v-icon>

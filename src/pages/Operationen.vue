@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-12">
-    <h1 class="text-h4 font-weight-bold mb-8 text-center">Operationen</h1>
+    <h2 class="font-weight-bold mb-8 text-center">Operationen</h2>
     <v-card class="pa-6 mx-auto" elevation="2" max-width="600">
       <v-list density="compact">
         <v-list-item

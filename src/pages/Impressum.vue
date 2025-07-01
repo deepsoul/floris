@@ -1,6 +1,6 @@
 <template>
   <v-container class="py-8" style="max-width: 800px">
-    <h1 class="text-h4 font-weight-bold mb-6">Impressum</h1>
+    <h2 class="font-weight-bold mb-6">Impressum</h2>
     <v-card class="pa-4 mb-4" elevation="1">
       <v-card-text>
         <strong>Enddarmzentrum Bietigheim</strong><br />

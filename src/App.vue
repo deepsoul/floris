@@ -57,7 +57,7 @@
     <v-footer color="primary" dark class="pa-3 small-footer">
       <v-container>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="6">
             <div class="font-weight-bold mb-2">Kontakt</div>
             <div>Enddarmzentrum Bietigheim</div>
             <div>Bahnhofsplatz 4</div>
@@ -66,7 +66,7 @@
             <div>Fax: 07142 / 54655</div>
             <div>info@enddarmzentrum-bietigheim.de</div>
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="6">
             <div class="font-weight-bold mb-2">Links</div>
             <div>
               <router-link to="/impressum" class="text-white"
@@ -79,8 +79,12 @@
               >
             </div>
           </v-col>
-          <v-col cols="12" md="4" class="text-md-right">
-            <div>© 2025 Enddarmzentrum Bietigheim</div>
+        </v-row>
+        <v-row>
+          <v-col cols="12" class="text-md-right">
+            <div>
+              <span>© 2025 Enddarmzentrum Bietigheim</span>
+            </div>
           </v-col>
         </v-row>
       </v-container>
