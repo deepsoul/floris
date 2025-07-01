@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-12">
+  <v-container class="my-12" style="max-width: 900px">
     <h2 class="font-weight-bold mb-8 text-center">Gastroskopie</h2>
     <v-card class="pa-6 mx-auto" elevation="2" max-width="700">
       <v-card-title class="font-weight-bold mb-2">

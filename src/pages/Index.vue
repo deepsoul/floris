@@ -3,10 +3,10 @@
     <!-- Hero Slider -->
     <v-carousel
       cycle
-      height="360"
+      :height="mdAndUp ? '450' : '180'"
       hide-delimiter-background
       show-arrows="hover"
-      interval="2000"
+      interval="6000"
       class="mb-8 hero-carousel elevation-3"
     >
       <v-carousel-item v-for="(img, i) in heroImages" :key="i">
@@ -313,6 +313,8 @@
   </v-container>
 </template>
 <script setup lang="ts">
+import {useDisplay} from 'vuetify';
+const {mdAndUp} = useDisplay();
 const heroImages = [
   '/assets/enddarmzentrum/hero/_1000164.png',
   '/assets/enddarmzentrum/hero/_1000165.png',
@@ -343,7 +345,7 @@ const team = [
   max-width: 100vw;
 }
 .hero-img {
-  height: 360px;
+  height: 450px;
 }
 @media (max-width: 600px) {
   .hero-img {

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-8" style="max-width: 900px">
+  <v-container class="py-8">
     <h2 class="font-weight-bold mb-6">Datenschutzerklärung</h2>
     <v-card class="pa-4 mb-4" elevation="1">
       <v-card-text>

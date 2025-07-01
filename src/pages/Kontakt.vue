@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-8" style="max-width: 600px">
+  <v-container class="py-8" width="900">
     <h2 class="font-weight-bold mb-6">Kontakt</h2>
     <v-form v-model="valid" @submit.prevent="submit">
       <v-radio-group v-model="method" row class="mb-4">
