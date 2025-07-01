@@ -66,9 +66,9 @@ const loading = ref(false);
 const method = ref('php'); // Versandmethode: 'php' oder 'emailjs'
 
 // EmailJS-Konfiguration (hier deine Daten eintragen!)
-const EMAILJS_SERVICE_ID = 'dein_service_id';
-const EMAILJS_TEMPLATE_ID = 'dein_template_id';
-const EMAILJS_PUBLIC_KEY = 'dein_public_key';
+const EMAILJS_SERVICE_ID = 'service_936cf4s';
+const EMAILJS_TEMPLATE_ID = 'template_d872bjs';
+const EMAILJS_PUBLIC_KEY = '1caDskB4OK6Io6HxJ';
 
 async function submit() {
   if (!valid.value) return;
