@@ -6,8 +6,14 @@
         <h2 class="text-h6 font-weight-bold mb-2">
           Diagnostik und Behandlung folgender Erkrankungen/Symptome:
         </h2>
-        <v-list density="compact">
-          <v-list-item v-for="item in behandlung" :key="item" :title="item" />
+        <v-list>
+          <v-list-item
+            v-for="item in behandlung"
+            :key="item"
+            :title="item"
+            elevation="0"
+            :active="false"
+          />
         </v-list>
       </v-col>
       <v-col cols="12" md="6">

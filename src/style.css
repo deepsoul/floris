@@ -94,9 +94,8 @@ button:focus-visible {
 }
 
 /* Animationen */
-.v-btn,
+/* .v-btn,
 .v-card,
-.v-list-item,
 .v-expansion-panel {
   transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
 }
@@ -114,4 +113,4 @@ button:focus-visible {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
+} */

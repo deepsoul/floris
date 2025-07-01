@@ -31,8 +31,8 @@
         class="mb-4"
       >
         <template #label>
-          Ich akzeptiere die
-          <a href="#datenschutz" target="_blank">Datenschutzerklärung</a>.
+          <span class="mr-2">Ich akzeptiere die</span>
+          <router-link to="/datenschutz">Datenschutzerklärung</router-link>.
         </template>
       </v-checkbox>
       <v-btn :disabled="!valid" color="primary" type="submit">Absenden</v-btn>
