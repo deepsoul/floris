@@ -2,7 +2,13 @@
   <v-container class="my-2 my-md-12" :width="mdAndUp ? 900 : '100%'">
     <h2 class="font-weight-bold mt-0 mb-md-6">Kontakt</h2>
     <v-form v-model="valid" @submit.prevent="submit" ref="formRef">
-      <v-radio-group v-model="method" row class="mb-4">
+      <v-radio-group
+        v-if="false"
+        v-model="method"
+        :disabled="true"
+        row
+        class="mb-4"
+      >
         <v-radio label="Per Server (PHP)" value="php" />
         <v-radio label="Per EmailJS (direkt, ohne Backend)" value="emailjs" />
       </v-radio-group>
@@ -69,7 +75,7 @@ const success = ref(false);
 const error = ref(false);
 const feedback = ref('');
 const loading = ref(false);
-const method = ref('php'); // Versandmethode: 'php' oder 'emailjs'
+const method = ref('emailjs'); // Versandmethode: 'php' oder 'emailjs'
 const formRef = ref();
 
 // EmailJS-Konfiguration (hier deine Daten eintragen!)
