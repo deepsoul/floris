@@ -21,7 +21,7 @@
     >
       <v-row justify="center">
         <v-col cols="12" md="6" class="text-center text-md-left">
-          <h1 class="display-2 font-weight-bold mb-4">
+          <h1 class="text-h6 text-md-h3 font-weight-bold mb-4">
             Willkommen im
             <span class="primary--text">Enddarmzentrum Bietigheim</span>
           </h1>
@@ -37,6 +37,7 @@
             class="mr-4 mb-2"
             href="#kontakt"
             elevation="2"
+            :block="smAndDown"
           >
             <v-icon start>mdi-email</v-icon>Kontakt aufnehmen
           </v-btn>
@@ -46,6 +47,7 @@
             variant="outlined"
             href="#team"
             elevation="2"
+            :block="smAndDown"
           >
             <v-icon start>mdi-account-group</v-icon>Unser Team
           </v-btn>
@@ -150,6 +152,7 @@
               class="mt-4"
               href="tel:0714253232"
               elevation="2"
+              :block="smAndDown"
             >
               <v-icon start>mdi-phone</v-icon>Jetzt anrufen
             </v-btn>
@@ -314,7 +317,7 @@
 </template>
 <script setup lang="ts">
 import {useDisplay} from 'vuetify';
-const {mdAndUp} = useDisplay();
+const {mdAndUp, smAndDown} = useDisplay();
 const heroImages = [
   '/assets/enddarmzentrum/hero/_1000164.png',
   '/assets/enddarmzentrum/hero/_1000165.png',

@@ -1,6 +1,6 @@
 <template>
-  <v-container class="py-8" width="900">
-    <h2 class="font-weight-bold mb-6">Kontakt</h2>
+  <v-container class="my-2 my-md-12" :width="mdAndUp ? 900 : '100%'">
+    <h2 class="font-weight-bold mt-0 mb-md-6">Kontakt</h2>
     <v-form v-model="valid" @submit.prevent="submit">
       <v-radio-group v-model="method" row class="mb-4">
         <v-radio label="Per Server (PHP)" value="php" />
@@ -41,7 +41,11 @@
           >
         </template>
       </v-checkbox>
-      <v-btn :disabled="!valid || loading" color="primary" type="submit"
+      <v-btn
+        :disabled="!valid || loading"
+        :block="smAndDown"
+        color="primary"
+        type="submit"
         >Absenden</v-btn
       >
       <v-alert v-if="success" type="success" class="mt-4">{{
@@ -52,6 +56,8 @@
   </v-container>
 </template>
 <script setup>
+import {useDisplay} from 'vuetify';
+const {mdAndUp, smAndDown} = useDisplay();
 import {ref} from 'vue';
 import emailjs from 'emailjs-com';
 const name = ref('');

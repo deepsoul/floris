@@ -1,13 +1,13 @@
 <template>
-  <v-container class="my-12">
-    <h2 class="font-weight-bold mb-8 text-center">Operationen</h2>
+  <v-container class="my-2 my-md-12">
+    <h2 class="font-weight-bold mt-0 mb-md-8 text-center">Operationen</h2>
     <v-card class="pa-6 mx-auto" elevation="2" max-width="600">
       <v-list density="compact">
         <v-list-item
           v-for="item in operationen"
           :key="item"
           :title="item"
-          prepend-icon="mdi-scalpel"
+          prepend-icon="mdi-doctor"
         />
       </v-list>
     </v-card>

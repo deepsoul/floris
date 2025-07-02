@@ -1,6 +1,6 @@
 <template>
-  <v-container class="my-12">
-    <h2 class="font-weight-bold mb-8 text-center">Leistungen</h2>
+  <v-container class="my-2 my-md-12">
+    <h2 class="font-weight-bold mt-0 mb-md-8 text-center">Leistungen</h2>
     <v-row>
       <v-col cols="12" md="6">
         <v-card class="pa-6 mb-6" elevation="2">
@@ -46,7 +46,7 @@
               v-for="item in operationen"
               :key="item"
               :title="item"
-              prepend-icon="mdi-scalpel"
+              prepend-icon="mdi-doctor"
             />
           </v-list>
         </v-card>

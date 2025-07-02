@@ -1,6 +1,6 @@
 <template>
-  <v-container class="my-12">
-    <h2 class="font-weight-bold mb-8 text-center">Erkrankungen</h2>
+  <v-container class="my-2 my-md-12">
+    <h2 class="font-weight-bold mt-0 mb-md-8 text-center">Erkrankungen</h2>
     <v-card class="pa-6" elevation="2">
       <v-expansion-panels multiple>
         <v-expansion-panel v-for="(item, i) in erkrankungen" :key="i">
