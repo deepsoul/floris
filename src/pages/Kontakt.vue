@@ -1,7 +1,7 @@
 <template>
   <v-container class="my-2 my-md-12" :width="mdAndUp ? 900 : '100%'">
     <h2 class="font-weight-bold mt-0 mb-md-6">Kontakt</h2>
-    <v-form v-model="valid" @submit.prevent="submit">
+    <v-form v-model="valid" @submit.prevent="submit" ref="formRef">
       <v-radio-group v-model="method" row class="mb-4">
         <v-radio label="Per Server (PHP)" value="php" />
         <v-radio label="Per EmailJS (direkt, ohne Backend)" value="emailjs" />
@@ -70,6 +70,7 @@ const error = ref(false);
 const feedback = ref('');
 const loading = ref(false);
 const method = ref('php'); // Versandmethode: 'php' oder 'emailjs'
+const formRef = ref();
 
 // EmailJS-Konfiguration (hier deine Daten eintragen!)
 const EMAILJS_SERVICE_ID = 'service_936cf4s';
@@ -103,6 +104,7 @@ async function submit() {
         email.value = '';
         message.value = '';
         privacy.value = false;
+        if (formRef.value) formRef.value.resetValidation();
       } else {
         error.value = true;
         feedback.value = data.message || 'Fehler beim Senden.';
@@ -138,6 +140,7 @@ async function submit() {
       email.value = '';
       message.value = '';
       privacy.value = false;
+      if (formRef.value) formRef.value.resetValidation();
     } catch (e) {
       error.value = true;
       feedback.value = 'Fehler beim Senden über EmailJS.';

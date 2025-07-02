@@ -23,7 +23,10 @@
         <v-col cols="12" md="6" class="text-center text-md-left">
           <h1 class="text-h6 text-md-h3 font-weight-bold mb-4">
             Willkommen im
-            <span class="primary--text">Enddarmzentrum Bietigheim</span>
+            <span class="primary--text"
+              ><span class="rainbow-headline">Enddarmzentrum</span>
+              Bietigheim</span
+            >
           </h1>
           <p class="subtitle-1 mb-6">
             Ihre Spezialisten für Diagnostik und Therapie von Erkrankungen des
@@ -115,7 +118,7 @@
     <v-container class="my-12">
       <v-row>
         <v-col cols="12" md="6">
-          <v-card elevation="2" class="pa-6 mb-4">
+          <v-card elevation="2" class="pa-6 mb-4" min-height="370">
             <v-card-title class="headline font-weight-bold mb-2">
               <v-icon start color="primary">mdi-clock-outline</v-icon
               >Sprechzeiten
@@ -131,7 +134,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="6" id="kontakt">
-          <v-card elevation="2" class="pa-6 mb-4">
+          <v-card elevation="2" class="pa-6 mb-4" min-height="370">
             <v-card-title class="headline font-weight-bold mb-2">
               <v-icon start color="primary">mdi-phone</v-icon>Kontakt
             </v-card-title>

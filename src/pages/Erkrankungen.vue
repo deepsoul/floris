@@ -8,7 +8,7 @@
             <v-icon start color="primary" class="mr-2"
               >mdi-alert-circle-outline</v-icon
             >
-            {{ item.title }}
+            <span class="text-h6">{{ item.title }}</span>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
             <div v-html="item.text" />

@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-2 my-md-12">
-    <h2 class="font-weight-bold mb-md-6">Impressum</h2>
+    <h2 class="font-weight-bold mt-0 mb-md-6">Impressum</h2>
     <v-card class="pa-4 mb-4" elevation="1">
       <v-card-text>
         <strong>Enddarmzentrum Bietigheim</strong><br />
@@ -64,3 +64,9 @@
     </v-card>
   </v-container>
 </template>
+<style lang="scss" scoped>
+strong {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1.1rem !important;
+}
+</style>

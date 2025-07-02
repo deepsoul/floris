@@ -35,6 +35,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return {top: 0};
+  },
 });
 // Vuetify Theme (optional, aber empfohlen)
 const vuetify = createVuetify({
@@ -61,6 +64,7 @@ const vuetify = createVuetify({
           'on-secondary': '#fff',
           'on-background': '#223A5E',
           'on-surface': '#223A5E',
+          'on-panel': '#e3f2fd',
         },
       },
     },

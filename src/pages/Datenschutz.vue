@@ -1,6 +1,6 @@
 <template>
   <v-container class="my-2 my-md-12">
-    <h2 class="font-weight-bold mb-md-6">Datenschutzerklärung</h2>
+    <h2 class="font-weight-bold mt-0 mb-md-6">Datenschutzerklärung</h2>
     <v-card class="pa-4 mb-4" elevation="1">
       <v-card-text>
         <strong

@@ -45,11 +45,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 700;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   color: #111;
+}
+
+.text-h6,
+.text-md-h3,
+.v-card-title,
+.v-expansion-panel-title {
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 h1 {
@@ -132,36 +139,6 @@ button:hover {
   }
 }
 
-/* @media (max-width: 600px) {
-  .v-app-bar {
-    min-height: 48px !important;
-    height: 48px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  .v-app-bar img {
-    max-width: 110px !important;
-    max-height: 36px !important;
-  }
-  .v-app-bar .v-btn {
-    min-width: 32px !important;
-    padding: 0 4px !important;
-  }
-} */
-
-/* Animationen */
-/* .v-btn,
-.v-card,
-.v-expansion-panel {
-  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-}
-.v-btn:hover,
-.v-card:hover,
-.v-list-item:hover,
-.v-expansion-panel:hover {
-  box-shadow: 0 4px 16px 0 #1976d222;
-  transform: translateY(-2px) scale(1.02);
-}*/
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.4s;
@@ -169,4 +146,31 @@ button:hover {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.rainbow-headline {
+  background: linear-gradient(
+    90deg,
+    #223a5e 0%,
+    /* primary */ #2196f3 20%,
+    /* info */ #43a047 40%,
+    /* success */ #bfbe37 60%,
+    /* secondary */ #fbc02d 80%,
+    /* warning */ #e53935 100% /* error */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.v-list-item-title {
+  white-space: normal !important;
+}
+
+.v-expansion-panel-text,
+.v-card-text {
+  text-align: left !important;
 }
