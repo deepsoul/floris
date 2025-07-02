@@ -26,6 +26,7 @@
         required
         class="mb-4"
       />
+      <v-text-field v-model="betreff" label="Betreff" class="mb-4" />
       <v-textarea
         v-model="message"
         label="Nachricht"
@@ -68,6 +69,7 @@ import {ref} from 'vue';
 import emailjs from 'emailjs-com';
 const name = ref('');
 const email = ref('');
+const betreff = ref('');
 const message = ref('');
 const privacy = ref(false);
 const valid = ref(false);
@@ -136,6 +138,7 @@ async function submit() {
           from_name: name.value,
           from_email: email.value,
           message: message.value,
+          betreff: betreff.value,
         },
         EMAILJS_PUBLIC_KEY,
       );
