@@ -138,7 +138,7 @@ async function submit() {
           from_name: name.value,
           from_email: email.value,
           message: message.value,
-          betreff: betreff.value,
+          title: betreff.value,
         },
         EMAILJS_PUBLIC_KEY,
       );
