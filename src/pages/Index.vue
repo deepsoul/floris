@@ -38,9 +38,9 @@
             color="primary"
             size="large"
             class="mr-4 mb-2"
-            href="#kontakt"
             elevation="2"
             :block="smAndDown"
+            @click="() => scrollToSection('kontakt')"
           >
             <v-icon start>mdi-email</v-icon>Kontakt aufnehmen
           </v-btn>
@@ -48,9 +48,9 @@
             color="secondary"
             size="large"
             variant="outlined"
-            href="#team"
             elevation="2"
             :block="smAndDown"
+            @click="() => scrollToSection('team')"
           >
             <v-icon start>mdi-account-group</v-icon>Unser Team
           </v-btn>
@@ -320,7 +320,18 @@
 </template>
 <script setup lang="ts">
 import {useDisplay} from 'vuetify';
+import {nextTick} from 'vue';
 const {mdAndUp, smAndDown} = useDisplay();
+
+function scrollToSection(id: string) {
+  nextTick(() => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  });
+}
+
 const heroImages = [
   '/assets/enddarmzentrum/hero/_1000164.png',
   '/assets/enddarmzentrum/hero/_1000165.png',
