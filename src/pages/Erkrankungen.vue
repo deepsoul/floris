@@ -8,7 +8,9 @@
             <v-icon start color="primary" class="mr-2"
               >mdi-alert-circle-outline</v-icon
             >
-            <span class="text-h6">{{ item.title }}</span>
+            <span class="text-h6" :class="{small: smAndDown}">{{
+              item.title
+            }}</span>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
             <div v-html="item.text" />
@@ -18,7 +20,9 @@
     </v-card>
   </v-container>
 </template>
-<script setup>
+<script lang="ts" setup>
+import {useDisplay} from 'vuetify/lib/composables/display';
+const {smAndDown} = useDisplay();
 const erkrankungen = [
   {
     title: 'Analabszeß und Analfistel',

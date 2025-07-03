@@ -1,4 +1,3 @@
-import './style.css';
 import {createApp} from 'vue';
 import App from './App.vue';
 import {createVuetify} from 'vuetify';
@@ -6,6 +5,7 @@ import 'vuetify/styles';
 import '@mdi/font/css/materialdesignicons.css';
 import {createRouter, createWebHistory} from 'vue-router';
 import {aliases, mdi} from 'vuetify/iconsets/mdi';
+import './style.css';
 
 import Index from './pages/Index.vue';
 import Leistungen from './pages/Leistungen.vue';

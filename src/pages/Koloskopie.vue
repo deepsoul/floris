@@ -2,7 +2,7 @@
   <v-container class="my-2 my-md-12">
     <h2 class="font-weight-bold mt-0 mb-md-8 text-center">Koloskopie</h2>
     <v-card class="pa-6 mx-auto" elevation="2" max-width="700">
-      <v-card-title class="font-weight-bold mb-2">
+      <v-card-title class="font-weight-bold mb-2" :class="{small: smAndDown}">
         <v-icon start color="primary">mdi-magnify</v-icon>
         Darmspiegelung (Koloskopie)
       </v-card-title>
@@ -29,3 +29,7 @@
     </v-card>
   </v-container>
 </template>
+<script lang="ts" setup>
+import {useDisplay} from 'vuetify/lib/composables/display';
+const {smAndDown} = useDisplay();
+</script>

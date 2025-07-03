@@ -27,6 +27,7 @@
               Lernen Sie unser Team und unsere modernen Praxisräume kennen. Wir
               legen Wert auf eine angenehme Atmosphäre und moderne Ausstattung.
             </p>
+            <br />
             <p>
               Verschaffen Sie sich einen Eindruck von unseren Räumlichkeiten und
               dem freundlichen Team, das Sie bei Ihrem Besuch erwartet.

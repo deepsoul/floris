@@ -60,17 +60,21 @@
             <div>74321 Bietigheim-Bissingen</div>
             <div>Tel.: 07142 / 53232</div>
             <div>Fax: 07142 / 54655</div>
-            <div>info@enddarmzentrum-bietigheim.de</div>
+            <div>
+              <a href="mailto:info@enddarmzentrum-bietigheim.de"
+                >info@enddarmzentrum-bietigheim.de</a
+              >
+            </div>
           </v-col>
           <v-col cols="12" md="6">
             <div class="font-weight-bold mb-2">Links</div>
             <div>
-              <router-link to="/impressum" class="text-white"
+              <router-link to="/impressum" class="page-link"
                 >Impressum</router-link
               >
             </div>
             <div>
-              <router-link to="/datenschutz" class="text-white"
+              <router-link to="/datenschutz" class="page-link"
                 >Datenschutzerklärung</router-link
               >
             </div>

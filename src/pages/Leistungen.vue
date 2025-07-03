@@ -4,12 +4,15 @@
     <v-row>
       <v-col cols="12" md="6">
         <v-card class="pa-6 mb-6" elevation="2">
-          <v-card-title class="font-weight-bold mb-2">
+          <v-card-title
+            class="font-weight-bold mb-2"
+            :class="{small: smAndDown}"
+          >
             <v-icon start color="primary">mdi-stethoscope</v-icon>
             Diagnostik & Behandlung
           </v-card-title>
           <v-divider class="mb-2" />
-          <h2 class="text-h6 font-weight-bold mb-2">
+          <h2 class="text-h6 font-weight-bold mb-2" :class="{small: smAndDown}">
             Folgende Erkrankungen/Symptome:
           </h2>
           <v-list density="compact">
@@ -25,7 +28,10 @@
       </v-col>
       <v-col cols="12" md="6">
         <v-card class="pa-6 mb-6" elevation="2">
-          <v-card-title class="font-weight-bold mb-2">
+          <v-card-title
+            class="font-weight-bold mb-2"
+            :class="{small: smAndDown}"
+          >
             <v-icon start color="primary">mdi-magnify</v-icon>
             Apparative Diagnostik
           </v-card-title>
@@ -38,7 +44,10 @@
               prepend-icon="mdi-checkbox-marked-circle-outline"
             />
           </v-list>
-          <h2 class="text-h6 font-weight-bold mt-6 mb-2">
+          <h2
+            class="text-h6 font-weight-bold mt-6 mb-2"
+            :class="{small: smAndDown}"
+          >
             Operationsspektrum:
           </h2>
           <v-list density="compact">
@@ -54,7 +63,9 @@
     </v-row>
   </v-container>
 </template>
-<script setup>
+<script lang="ts" setup>
+import {useDisplay} from 'vuetify/lib/composables/display';
+const {smAndDown} = useDisplay();
 const behandlung = [
   'Hämorrhoiden aller Stadien',
   'Analfistel',
