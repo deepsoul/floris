@@ -333,6 +333,7 @@ function scrollToSection(id: string) {
 }
 
 const heroImages = [
+  '/assets/enddarmzentrum/og_enddarmzentrum.png',
   '/assets/enddarmzentrum/hero/_1000164.png',
   '/assets/enddarmzentrum/hero/_1000165.png',
   '/assets/enddarmzentrum/hero/_1000171.png',

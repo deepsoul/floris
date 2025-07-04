@@ -52,7 +52,7 @@ const vuetify = createVuetify({
       floris: {
         dark: false,
         colors: {
-          primary: '#223a5e', // elegantes dunkles Blau
+          primary: '#3a5068', // elegantes dunkles Blau
           secondary: '#bfbe37', // Curry Akzent
           background: '#f5f7fa',
           surface: '#fff',
