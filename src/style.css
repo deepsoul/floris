@@ -18,7 +18,7 @@
 a,
 .page-link {
   font-weight: 500;
-  color: #646cff;
+  color: #a3b7b8;
   text-decoration: inherit;
 }
 a:hover,
@@ -107,7 +107,7 @@ button {
   }
   a:hover,
   .page-link:hover {
-    color: #747bff;
+    color: #a3b7b8;
   }
   button {
     background-color: #f9f9f9;
@@ -157,11 +157,11 @@ button {
   background: linear-gradient(
     90deg,
     #223a5e 0%,
-    /* primary */ #2196f3 20%,
-    /* info */ #43a047 40%,
-    /* success */ #bfbe37 60%,
-    /* secondary */ #fbc02d 80%,
-    /* warning */ #e53935 100% /* error */
+    /* dunkles Blau */ #3a5068 20%,
+    /* gedecktes Mittelblau */ #5a7d7c 40%,
+    /* gedecktes Petrol/Grünblau */ #a3b7b8 60%,
+    /* helles, kühles Grau/Blau */ #bfc9d1 80%,
+    /* sehr helles Grau */ #6e7b8b 100% /* gedecktes Blaugrau */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
