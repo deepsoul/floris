@@ -160,8 +160,8 @@ button {
     /* dunkles Blau */ #3a5068 20%,
     /* gedecktes Mittelblau */ #5a7d7c 40%,
     /* gedecktes Petrol/Grünblau */ #a3b7b8 60%,
-    /* helles, kühles Grau/Blau */ #bfc9d1 80%,
-    /* sehr helles Grau */ #6e7b8b 100% /* gedecktes Blaugrau */
+    /* helles, kühles Grau/Blau */ #bfbe37 80%,
+    /* sehr helles Grau */ #1266f1 100% /* gedecktes Blaugrau */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
