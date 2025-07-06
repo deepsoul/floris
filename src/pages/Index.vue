@@ -16,7 +16,7 @@
     <!-- Hero -->
     <v-sheet
       color="#e3f2fd"
-      class="pa-0 pa-md-12 pa-lg-16 hero-section elevation-0"
+      class="pa-4 pa-md-12 pa-lg-16 hero-section elevation-0"
       elevation="0"
     >
       <v-row justify="center">
